@@ -9,7 +9,6 @@
 
 //PH sensor part
 #define Offset 0.00  //deviation compensate
-#define LED 13
 #define samplingInterval 20
 #define printInterval 800
 #define ArrayLenth 40     //times of collection
@@ -39,9 +38,9 @@ float averageVoltage = 0, temperature = 25;
 
 LiquidCrystal_I2C lcd1602(0x27, 16, 2);  //16*2 LCD I2C module setting
 
-unsigned int RelayWater_time = 1;  //water relay on time variable
-unsigned int RelayPH_time = 1;     //ph relay on time variable
-unsigned int RelayTDS_time = 1;    //ec relay on time variable
+unsigned int RelayWater_time = 60;  //water relay on time variable
+unsigned int RelayPH_time = 60;     //ph relay on time variable
+unsigned int RelayTDS_time = 60;    //ec relay on time variable
 
 int Liquid_level = 0;   //water sensor state variable
 static float PH_level;  //ph sensor state variable
@@ -70,7 +69,7 @@ void setup() {
     lcd1602.backlight();
     lcd1602.setCursor(0, 0);
     lcd1602.print("gongzipsa");
-    delay(1000);
+    delay(1500);
 }
 
 void loop() {
