@@ -9,7 +9,7 @@
 
 |sensor|model number|
 |--|--|
-|Water sensor|SEN0204|
+|Water sensor 2°³|SEN0204|
 |TDS sensor|SEN0244|
 |PH sensor|SEN0169|
 
